@@ -1,0 +1,14 @@
+*sublime-*
+*.svg
+*.xcf
+
+*.so
+
+*.pcd
+
+build/
+
+build/CMakeFiles/ORB_SLAM2.dir/src/Optimizer.cc.o
+
+Vocabulary/ORBvoc.txt
+
