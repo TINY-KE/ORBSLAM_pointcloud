@@ -1,0 +1,10 @@
+<launch> 
+
+  <node pkg="orbslam2_pointcloud_ros" type="RGBD" name="ORB_SLAM2" 
+    args="$(find orbslam2_pointcloud_ros)/../../../Vocabulary/ORBvoc.bin
+    $(find orbslam2_pointcloud_ros)/../../../Examples/kinectdk_720.yaml" cwd="node" output="screen">
+    <remap from="/camera/rgb/image_raw" to="/rgb/image_raw" />
+    <remap from="/camera/depth_registered/image_raw" to="/depth_to_rgb/image_raw" />
+  </node>
+
+</launch> 

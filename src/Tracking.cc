@@ -99,9 +99,16 @@ Tracking::Tracking(System *pSys, ORBVocabulary* pVoc, FrameDrawer *pFrameDrawer,
     cout << "- p1: " << DistCoef.at<float>(2) << endl;
     cout << "- p2: " << DistCoef.at<float>(3) << endl;
     cout << "- fps: " << fps << endl;
+    // zhangjiadong for kinectdk
+    if(DistCoef.rows==8)
+        {
+            cout << "- k3: " << DistCoef.at<float>(4) << endl;
+            cout << "- k4: " << DistCoef.at<float>(5) << endl;
+            cout << "- k5: " << DistCoef.at<float>(6) << endl;
+            cout << "- k6: " << DistCoef.at<float>(7) << endl;
+        }
 
-
-    int nRGB = fSettings["Camera.RGB"];
+        int nRGB = fSettings["Camera.RGB"];
     mbRGB = nRGB;
 
     if(mbRGB)
@@ -207,10 +214,11 @@ cv::Mat Tracking::GrabImageStereo(const cv::Mat &imRectLeft, const cv::Mat &imRe
 
 cv::Mat Tracking::GrabImageRGBD(const cv::Mat &imRGB,const cv::Mat &imD, const double &timestamp)
 {
-    mImRGB = imRGB;//添加这行
+    mImRGB = imRGB;//zhangjiadong 添加这行
+    cv::cvtColor(  mImRGB,  mImRGB , CV_BGRA2BGR);//zhangjiadong 添加这行
     mImGray = imRGB;
     mImDepth = imD;
-
+    
     if(mImGray.channels()==3)
     {
         if(mbRGB)
@@ -1580,6 +1588,25 @@ void Tracking::ChangeCalibration(const string &strSettingPath)
     {
         DistCoef.resize(5);
         DistCoef.at<float>(4) = k3;
+    }
+    // zhangjiadong for kinectdk
+    const float k4 = fSettings["Camera.k4"];
+    if(k4!=0)
+    {
+        DistCoef.resize(6);
+        DistCoef.at<float>(5) = k4;
+    }
+    const float k5 = fSettings["Camera.k5"];
+    if(k5!=0)
+    {
+        DistCoef.resize(7);
+        DistCoef.at<float>(6) = k5;
+    }
+    const float k6 = fSettings["Camera.k6"];
+    if(k6!=0)
+    {
+        DistCoef.resize(8);
+        DistCoef.at<float>(7) = k6;
     }
     DistCoef.copyTo(mDistCoef);
 

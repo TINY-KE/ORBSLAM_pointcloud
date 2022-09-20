@@ -1,0 +1,10 @@
+<launch> 
+
+  <node pkg="orbslam2_pointcloud_ros" type="RGBD" name="ORB_SLAM2" 
+          args="/home/zhjd/ws_active/src/kinect/ORB_SLAM2/Vocabulary/ORBvoc.txt /home/zhjd/ws_active/src/kinect/ORB_SLAM2/Examples/kinect2.yaml" cwd="node" output="screen">
+          <!-- /home/zhjd/work/ORB_SLAM2/Vocabulary/ORBvoc.txt /home/zhjd/work/ORB_SLAM2/Examples/kinect2.yaml -->
+    <remap from="/camera/rgb/image_raw" to="/kinect2/qhd/image_color_rect" />
+    <remap from="camera/depth_registered/image_raw" to="/kinect2/qhd/image_depth_rect" />
+  </node>
+
+</launch> 

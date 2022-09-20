@@ -122,7 +122,8 @@ void PointCloudMapping::viewer()
             *globalMap += *p;
         }
         // zhangjiadong  保存pcl地图
-        pcl::io::savePCDFileBinary("vslam.pcd", *globalMap);   // 只需要加入这一句
+        pcl::io::savePCDFileBinary("/home/zhjd/ws_active/src/kinect/ORBSLAM2_with_pointcloud_map/ORB_SLAM2_modified/buaa.pcd", *globalMap);   // 只需要加入这一句
+        std::cout<<"点云地图保存完毕。"<<std::endl;
 
         PointCloud::Ptr tmp(new PointCloud());
         voxel.setInputCloud( globalMap );

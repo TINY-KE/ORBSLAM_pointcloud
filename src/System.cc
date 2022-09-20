@@ -100,7 +100,9 @@ System::System(const string &strVocFile, const string &strSettingsFile, const eS
 
     // Initialize pointcloud mapping
     mpPointCloudMapping = make_shared<PointCloudMapping>( resolution );
-
+    printf("启动稠密点云建图\n" );
+    sleep(2);
+    
     //Initialize the Tracking thread
     //(it will live in the main thread of execution, the one that called this constructor)
     mpTracker = new Tracking(this, mpVocabulary, mpFrameDrawer, mpMapDrawer,

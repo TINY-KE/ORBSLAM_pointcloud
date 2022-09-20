@@ -1,0 +1,44 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/zhjd/ws_active/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/zhjd/ws_turtlebot_custom/devel/include/**",
+        "/home/zhjd/ws_active/src/algorithm/astar/include/**",
+        "/home/zhjd/ws_active/src/kinect/Azure_Kinect_ROS_Driver/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/depthimage_to_laserscan/include/**",
+        "/home/zhjd/ws_active/src/algorithm/exploration/explore/include/**",
+        "/home/zhjd/ws_active/src/algorithm/m-explore(explore_lite)/explore/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/kobuki_auto_docking/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/kobuki_bumper2pc/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/kobuki_controller_tutorial/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/kobuki_desktop/kobuki_gazebo_plugins/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/kobuki_keyop/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/kobuki_node/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/kobuki_random_walker/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/kobuki_safety_controller/include/**",
+        "/home/zhjd/ws_active/src/algorithm/map_frontier/include/**",
+        "/home/zhjd/ws_active/src/algorithm/m-explore(explore_lite)/map_merge/include/**",
+        "/home/zhjd/ws_active/src/octomap/publish_pointcloud/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/robot_pose_ekf/include/**",
+        "/home/zhjd/ws_active/src/algorithm/RRT_exploration/rrt_exploration-master/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/turtlebot_apps-indigo/turtlebot_actions/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/kobuki_desktop/joystick_drivers/wiimote/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/yocs_cmd_vel_mux/include/**",
+        "/home/zhjd/ws_turtlebot_custom/src/yocs_controllers/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

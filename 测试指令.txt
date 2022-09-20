@@ -1,0 +1,8 @@
+非ros的RGBD版： 
+./bin/rgbd_tum Vocabulary/ORBvoc.txt Examples/RGB-D/TUM1.yaml /home/zhjd/dataset/rgbd_dataset_freiburg1_desk /home/zhjd/dataset/rgbd_dataset_freiburg1_desk/associate.txt
+
+./bin/rgbd_tum Vocabulary/ORBvoc.bin  Examples/RGB-D/TUM1.yaml /home/zhjd/dataset/rgbd_dataset_freiburg1_desk /home/zhjd/dataset/rgbd_dataset_freiburg1_desk/associate.txt
+
+二、ros的RGBD版： 
+roslaunch orbslam2_pointcloud_ros rgbd_kinectdk.launch
+
