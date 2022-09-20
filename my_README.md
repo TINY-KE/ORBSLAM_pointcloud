@@ -40,4 +40,5 @@ The Compile operation is as follows:
 
 # TODO:
 
+* 相机畸变参数的标定
 * 单个物体的测试
